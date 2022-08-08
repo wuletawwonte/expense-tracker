@@ -1,1 +1,9 @@
-Beimnet Desalegn
+<div class="h-screen w-full">
+  <div class="h-4/6">
+    <h2>Beimnet Desalegn</h2>
+  </div>
+  <div class="h-2/6 w-full">
+    <%= button_to "LOGIN IN", new_user_session_path, method: :get, class: "w-full h-12 px-6 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800" %>
+    <%= button_to "SIGN UP", new_user_registration_path, method: :get, class: "w-full mt-2 h-12 px-6 text-gray-800 transition-colors duration-150 bg-white rounded-lg focus:shadow-outline hover:bg-gray-200" %>
+  </div>
+</div>
