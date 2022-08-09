@@ -8,14 +8,14 @@
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">LOGIN</span>
       </a>
       <a href="#" class="flex items-center">
-        <input class="self-center text-xl whitespace-nowrap dark:text-white" type="submit" value="Log In" form="signIn" >
+        <input class="self-center text-xl cursor-pointer whitespace-nowrap dark:text-white" type="submit" value="Log In" form="sign_in" >
       </a>
     </div>
   </nav>
 
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name), id: "signIn") do |f| %>
-    <%= f.email_field :email, autocomplete: "email", placeholder: 'Email', class: "mt-3 border-slate-400 w-full", required: true %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:id => "sign_in"} ) do |f| %>
+    <%= f.email_field :email, autocomplete: "email", placeholder: 'Email', class: "mt-3 border-slate-400 w-full", :required => true %>
     <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: "border-slate-400 border-t-0 w-full" %>
   <% end %>
 
