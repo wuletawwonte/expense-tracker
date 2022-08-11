@@ -1,0 +1,18 @@
+<main class="bg-slate-300 h-full">
+  <nav class="px-2 sm:px-4 py-2.5 dark:bg-blue-900 border-b border-gray-200 dark:border-gray-600">
+    <div class="container flex flex-row justify-between items-center mx-auto">
+      <div class="flex items-center basis-1/3"></div>
+      <a href="/categories" class="flex items-center justify-center basis-1/3">
+        <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">CATEGORIES</span>
+      </a>
+      <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "font-semibold whitespace-nowrap dark:text-white", form_class: "flex items-center justify-end basis-1/3" %>
+    </div>
+  </nav>
+
+  <div class="w-full flex pt-2.5 h-screen">
+    <div class="bg-lime-500 sticky mt-auto ml-auto bottom-5 p-3 w-full flex">
+      <%= link_to "ADD", new_category_path, class: "bg-lime-500 text-xl text-center text-white mt-auto border border-2 border-slate-300 ml-auto bottom-5 p-3 w-full hover:border-white hover:font-bold" %>
+    </div>
+  </div>
+
+</main>
