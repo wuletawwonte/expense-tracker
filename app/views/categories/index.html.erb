@@ -11,7 +11,13 @@
 
   <div class="mt-2 flex px-2">
     <% @categories.each do |category| %>
-      <h2><%= category.name %></h2>
+      <div class="w-full bg-white p-2 items-center justify-between gap-2 flex">
+        <div class="flex items-center gap-2">
+        <%= fa_icon "camera-retro 3x bg-blue-900" %>
+        <h2 class="text-gray-600 font-sans"><%= category.name %></h2>
+        </div>
+        <%= link_to fa_icon "arrow-right", :action => "#" %>
+      </div>
     <% end %>
   </div>
 
