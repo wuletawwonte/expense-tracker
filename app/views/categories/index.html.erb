@@ -9,9 +9,15 @@
     </div>
   </nav>
 
+  <div class="mt-2 flex px-2">
+    <% @categories.each do |category| %>
+      <h2><%= category.name %></h2>
+    <% end %>
+  </div>
+
   <div class="w-full flex pt-2.5 h-screen">
     <div class="bg-lime-500 sticky mt-auto ml-auto bottom-5 p-3 w-full flex">
-      <%= link_to "ADD", new_category_path, class: "bg-lime-500 text-xl text-center text-white mt-auto border border-2 border-slate-300 ml-auto bottom-5 p-3 w-full hover:border-white hover:font-bold" %>
+      <%= link_to "ADD", new_category_path, class: "bg-lime-500 text-xl text-center text-white mt-auto border border-2 border-slate-300 ml-auto bottom-5 p-2 w-full hover:border-white hover:font-bold" %>
     </div>
   </div>
 
