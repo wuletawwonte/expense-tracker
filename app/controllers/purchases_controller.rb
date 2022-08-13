@@ -1,7 +1,7 @@
 class PurchasesController < ApplicationController
   def index
     @category = Category.find(params['category_id'])
-    @purchases = Purchase.where(user_id: current_user.id, category_id: params['category_id'])
+    @purchases = Purchase.where(user_id: current_user.id, category_id: params['category_id']).order(created_at: :desc)
     @total_price = @purchases.sum(:amount)
   end
 
