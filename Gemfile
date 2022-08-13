@@ -80,4 +80,4 @@ end
 
 gem 'devise', '~> 4.8'
 
-gem "font-awesome-rails"
+gem 'font-awesome-rails'

@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.where(user_id: current_user.id)
   end
-  
+
   def new
     @category = Category.new
   end
@@ -16,7 +16,7 @@ class CategoriesController < ApplicationController
         if @category.save
           flash[:success] = 'Category successfully saved'
           redirect_to categories_path
-        else 
+        else
           flash[:error] = 'Unable to save Category'
           render new
         end
@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
     end
   end
 
-  private 
+  private
 
   def category_params
     params.require(:category).permit(:icon, :name)
