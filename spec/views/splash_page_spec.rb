@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Show splash page: ', type: :feature do
   before(:each) do
-    visit "/"
+    visit '/'
   end
 
   it 'shows the name of the application' do
@@ -16,5 +16,4 @@ RSpec.describe 'Show splash page: ', type: :feature do
   it 'shows the sign up link' do
     expect(page).to have_content('SIGN UP')
   end
-
 end

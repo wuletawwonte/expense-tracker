@@ -1,13 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-
-  before { 
-    @user = User.create(name: "Wuletaw Wonte", email: "wuletawwonte@gmail.com", password: "123456")
+  before do
+    @user = User.create(name: 'Wuletaw Wonte', email: 'wuletawwonte@gmail.com', password: '123456')
     @category = Category.new(user: @user, name: 'My Category', icon: 'briefcase')
 
-    @category.save! 
-  }
+    @category.save!
+  end
 
   it 'is valid with valid attributes' do
     expect(@category).to be_valid
@@ -27,5 +26,4 @@ RSpec.describe Category, type: :model do
     @category.icon = nil
     expect(@category).to_not be_valid
   end
-
 end

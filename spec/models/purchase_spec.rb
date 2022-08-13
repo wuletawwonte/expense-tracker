@@ -1,14 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Purchase, type: :model do
-
-  before { 
-    @user = User.create(name: "Wuletaw Wonte", email: "wuletawwonte@gmail.com", password: "123456")
+  before do
+    @user = User.create(name: 'Wuletaw Wonte', email: 'wuletawwonte@gmail.com', password: '123456')
     @category = Category.new(user: @user, name: 'My Category', icon: 'briefcase')
     @purchase = Purchase.new(user: @user, category: @category, name: 'purchase name', amount: '12')
 
-    @purchase.save! 
-  }
+    @purchase.save!
+  end
 
   it 'is valid with valid attributes' do
     expect(@purchase).to be_valid
@@ -33,5 +32,4 @@ RSpec.describe Purchase, type: :model do
     @purchase.amount = nil
     expect(@purchase).to_not be_valid
   end
-
 end
