@@ -16,7 +16,10 @@
       <div class="w-full bg-white p-2 pr-4 rounded items-center justify-between gap-2 flex hover:bg-slate-50">
         <div class="flex items-center gap-2">
           <%= fa_icon "#{category.icon} 3x", class: "w-13 h-13 text-slate-600" %>
-          <h2 class="text-gray-600 font-sans"><%= category.name %></h2>
+          <div>
+            <h2 class="text-gray-900 text-lg font-sans"><%= category.name %></h2>
+            <h3 class="text-gray-600"><%= category.created_at %><h3>
+          </div>
         </div>
         <%= link_to category_purchases_path(category_id: category.id) do %>
           <%= fa_icon "angle-right 2x" %>
