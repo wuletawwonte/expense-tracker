@@ -16,6 +16,10 @@ Expense tracker is a mobile web application where you can manage your budget: yo
 - PostgreSQL
 
 
+## Live Demo
+
+Visit live demo [here](https://wuletaw-expense-tracker.herokuapp.com/)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
